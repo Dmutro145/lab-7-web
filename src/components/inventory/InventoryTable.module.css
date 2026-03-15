@@ -1,0 +1,107 @@
+.wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.th:first-child { border-radius: var(--radius-lg) 0 0 0; }
+.th:last-child  { border-radius: 0 var(--radius-lg) 0 0; }
+
+.row {
+  transition: background 0.15s;
+}
+
+.row:hover {
+  background: var(--bg-hover);
+}
+
+.row:not(:last-child) td {
+  border-bottom: 1px solid var(--border);
+}
+
+.td {
+  padding: 12px 16px;
+  vertical-align: middle;
+}
+
+.imgWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.desc {
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.empty {
+  color: var(--text-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  transition: all 0.15s;
+}
+
+.btn:hover {
+  border-color: var(--border-light);
+  transform: translateY(-1px);
+}
+
+.btnView:hover  { color: var(--info);    background: var(--info-dim);    border-color: var(--info); }
+.btnEdit:hover  { color: var(--accent);  background: var(--accent-dim);  border-color: var(--accent); }
+.btnDelete:hover{ color: var(--danger);  background: var(--danger-dim);  border-color: var(--danger); }
